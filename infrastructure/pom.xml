@@ -15,7 +15,6 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
-
     <dependencies>
         <dependency>
             <groupId>it.unisannio</groupId>
@@ -27,6 +26,4 @@
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
     </dependencies>
-
-
 </project>
