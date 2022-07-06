@@ -13,6 +13,8 @@ import java.util.UUID;
 public class Vehicle {
 
     private final VehicleId id;
+
+    private String friendlyName;
     private LicensePlate licensePlate;
     /**
      * dimension are in cm, we approximate to cm so they are integer
@@ -29,7 +31,8 @@ public class Vehicle {
     /**
      * @throws it.unisannio.domain.exceptions.LicensePlateException if license plate format is not correct
      */
-    public Vehicle(UUID id, String licensePlate, int length, int height, int depth, float capacity) {
+    public Vehicle(UUID id, String friendlyName, String licensePlate, int length, int height, int depth, float capacity) {
+        this.friendlyName = friendlyName;
         this.id = new VehicleId(id);
         this.licensePlate = new LicensePlate(licensePlate);
         this.length = length;

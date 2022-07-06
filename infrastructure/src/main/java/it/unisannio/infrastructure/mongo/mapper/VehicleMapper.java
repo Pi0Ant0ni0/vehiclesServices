@@ -10,6 +10,7 @@ public class VehicleMapper {
     public static Vehicle toDomain(VehicleEntity entity) {
         Vehicle aVehicle = new Vehicle(
                 entity.getId(),
+                entity.getFriendlyName(),
                 entity.getLicensePlate(),
                 entity.getLength(),
                 entity.getHeight(),
@@ -25,6 +26,7 @@ public class VehicleMapper {
     public static VehicleEntity toEntity(Vehicle vehicle) {
         return new VehicleEntity(
                 vehicle.getId().getId(),
+                vehicle.getFriendlyName(),
                 vehicle.getLicensePlate().getLicensePlate(),
                 vehicle.getLength(),
                 vehicle.getHeight(),
