@@ -8,11 +8,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.UUID;
 
 @Data
-@Document(collation = "Vehicles")
+@Document("vehicles")
 @AllArgsConstructor
 public class VehicleEntity {
     @Id
     private UUID id;
+    private String friendlyName;
     private String licensePlate;
     /**
      * dimension are in cm, we approximate to cm so they are integer
