@@ -1,7 +1,7 @@
 package it.unisannio.application.services;
 
 import it.unisannio.application.useCases.GetVehicleByUUIDUseCase;
-import it.unisannio.application.useCases.GetVehiclesListUseCase;
+import it.unisannio.application.useCases.ViewVehiclesListUseCase;
 import it.unisannio.domain.model.Vehicle;
 import it.unisannio.domain.repository.GetVehicleByUUIDPort;
 import it.unisannio.domain.repository.GetVehiclesListPort;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-public class GetVehicleService implements GetVehiclesListUseCase, GetVehicleByUUIDUseCase {
+public class GetVehicleService implements ViewVehiclesListUseCase, GetVehicleByUUIDUseCase {
 
     @Autowired
     private GetVehiclesListPort getVehiclesListPort;

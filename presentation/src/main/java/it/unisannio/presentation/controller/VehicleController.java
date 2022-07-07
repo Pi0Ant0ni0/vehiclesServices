@@ -16,15 +16,15 @@ import java.util.UUID;
 @RequestMapping("/vehicles")
 public class VehicleController {
     @Autowired
-    private AddVehicleUseCase addVehicleUseCase;
+    private AddVehicleToTheFleetUseCase addVehicleToTheFleetUseCase;
     @Autowired
-    private GetVehiclesListUseCase getVehiclesListUseCase;
+    private ViewVehiclesListUseCase viewVehiclesListUseCase;
 
     @Autowired
     private GetVehicleByUUIDUseCase getVehicleByUUIDUseCase;
 
     @Autowired
-    private DeleteVehicleByUUIDUseCase deleteVehicleByUUIDUseCase;
+    private RemoveVehicleFromTheFleetUseCase removeVehicleFromTheFleetUseCase;
 
     @Autowired
     private UpdateLicensePlateVehicleUseCase updateLicensePlateVehicleUseCase;
@@ -33,13 +33,13 @@ public class VehicleController {
     @Operation(description = "add a vehicle")
     @PostMapping
     public void get(@Valid @RequestBody CreateVehicleCommand command) {
-        this.addVehicleUseCase.addVehicle(command);
+        this.addVehicleToTheFleetUseCase.addVehicle(command);
     }
 
     @Operation(description = "get a List of Vehicles")
     @GetMapping
     public List<Vehicle> get(){
-        return this.getVehiclesListUseCase.getVehicles();
+        return this.viewVehiclesListUseCase.getVehicles();
     }
 
     @Operation(description = "get Vehicle from UUID")
@@ -51,7 +51,7 @@ public class VehicleController {
     @Operation(description = "delete Vehicle by UUID")
     @DeleteMapping("/{id}")
     public void delete(@PathVariable("id") String uuid){
-        this.deleteVehicleByUUIDUseCase.deleteVehicle(UUID.fromString(uuid));
+        this.removeVehicleFromTheFleetUseCase.deleteVehicle(UUID.fromString(uuid));
     }
 
     @Operation(description = "update License Plate of a Vehicle identified by his UUID")

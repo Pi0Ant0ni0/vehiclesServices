@@ -4,6 +4,6 @@ import it.unisannio.domain.model.Vehicle;
 
 import java.util.List;
 
-public interface GetVehiclesListUseCase {
+public interface ViewVehiclesListUseCase {
     List<Vehicle> getVehicles();
 }

@@ -2,6 +2,6 @@ package it.unisannio.application.useCases;
 
 import it.unisannio.application.useCases.commands.CreateVehicleCommand;
 
-public interface AddVehicleUseCase {
+public interface AddVehicleToTheFleetUseCase {
     void addVehicle(CreateVehicleCommand command);
 }

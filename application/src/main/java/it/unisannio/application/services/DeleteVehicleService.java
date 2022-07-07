@@ -1,13 +1,13 @@
 package it.unisannio.application.services;
 
-import it.unisannio.application.useCases.DeleteVehicleByUUIDUseCase;
+import it.unisannio.application.useCases.RemoveVehicleFromTheFleetUseCase;
 import it.unisannio.domain.repository.DeleteVehicleByUUIDPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 @Service
-public class DeleteVehicleService implements DeleteVehicleByUUIDUseCase {
+public class DeleteVehicleService implements RemoveVehicleFromTheFleetUseCase {
 
     @Autowired
     private DeleteVehicleByUUIDPort deleteVehicleByUUIDPort;
