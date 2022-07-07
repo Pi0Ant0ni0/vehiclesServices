@@ -6,7 +6,6 @@ import it.unisannio.application.useCases.commands.CreateVehicleCommand;
 import it.unisannio.application.useCases.commands.UpdateLicensePlateVehicleCommand;
 import it.unisannio.domain.model.Vehicle;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
