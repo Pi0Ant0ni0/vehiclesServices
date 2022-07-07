@@ -1,0 +1,21 @@
+package it.unisannio.application.services;
+
+import it.unisannio.application.useCases.UpdateLicensePlateVehicleUseCase;
+import it.unisannio.application.useCases.commands.UpdateLicensePlateVehicleCommand;
+import it.unisannio.domain.repository.UpdateLicensePlateVehiclePort;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.UUID;
+@Service
+public class UpdateVehicleService implements UpdateLicensePlateVehicleUseCase {
+
+    @Autowired
+    private UpdateLicensePlateVehiclePort updateLicensePlateVehiclePort;
+
+
+    @Override
+    public void updateVehicle(UUID id, UpdateLicensePlateVehicleCommand command) {
+        this.updateLicensePlateVehiclePort.updateLicensePlate(id, command.getLicensePlate());
+    }
+}
