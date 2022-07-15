@@ -4,6 +4,6 @@ import it.unisannio.domain.model.Vehicle;
 
 import java.util.UUID;
 
-public interface DeleteVehicleByUUIDPort {
-    void deleteVehicleByUUID(UUID uuid);
+public interface DeleteVehicleByIDPort {
+    void deleteVehicleByVehicleID(Vehicle.VehicleId id);
 }

@@ -24,6 +24,6 @@ public class VehicleEntity {
     /**
      * unit measure: m^3
      */
-    private float capacity;
+    private int capacity;
     private String state;
 }

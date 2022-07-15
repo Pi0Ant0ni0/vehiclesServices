@@ -25,6 +25,6 @@ public class CreateVehicleCommand {
     private Integer depth;
     @NotNull
     @Min(value = 0, message = "capacity can't be less than 0")
-    private Float capacity;
+    private Integer capacity;
 
 }

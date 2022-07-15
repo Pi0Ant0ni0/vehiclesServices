@@ -25,13 +25,13 @@ public class Vehicle {
     /**
      * unit measure: l
      */
-    private final float capacity;
+    private final int capacity;
     private VehicleState state;
 
     /**
      * @throws it.unisannio.domain.exceptions.LicensePlateException if license plate format is not correct
      */
-    public Vehicle(UUID id, String friendlyName, String licensePlate, int length, int height, int depth, float capacity) {
+    public Vehicle(UUID id, String friendlyName, String licensePlate, int length, int height, int depth, int capacity) {
         this.friendlyName = friendlyName;
         this.id = new VehicleId(id);
         this.licensePlate = new LicensePlate(licensePlate);
@@ -44,7 +44,7 @@ public class Vehicle {
 
     @Value
     @ValueObject
-    public class VehicleId {
+    public static class VehicleId {
         private UUID id;
     }
 
