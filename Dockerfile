@@ -5,7 +5,7 @@ COPY domain /home/app/domain
 COPY infrastructure /home/app/infrastructure
 COPY presentation /home/app/presentation
 COPY pom.xml /home/app
-RUN mvn -f /home/app/pom.xml clean package
+RUN mvn -f /home/app/pom.xml clean install
 
 #
 # Package stage
